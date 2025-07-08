@@ -12,17 +12,17 @@ const Footer = () => {
   return (
     <footer className="bg-white pt-0 pb-0 px-0 border-t border-primary-200 dark:border-gray-700">
       <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto pt-10 pb-6">
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center mb-6 ">
           <img
           src={require("../Assets/Icons/Zarrin.png")}
           alt=""
-          className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 w-auto mb-6 object-contain cursor-pointer "
+          className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 w-auto object-contain cursor-pointer "
           onClick={() => {
             navigate("/");
             window.scrollTo({ top: 0, behavior: "auto" });
           }}
-        />
-        <h1 className="text-3xl font-bold">Zarrin</h1>
+          />
+          <h1 className="text-3xl font-bold">Zarrin</h1>
         </div>
         
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-6">
