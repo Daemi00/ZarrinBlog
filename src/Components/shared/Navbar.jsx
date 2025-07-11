@@ -14,7 +14,7 @@ const Navbar = () => {
   const GoToHome = useNavigate();
 
   return (
-    <header className=" bg-white shadow-md py-4 px-6 fixed top-0 left-0 w-full z-50">
+    <header className=" bg-white shadow-md py-4 px-6  w-full">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
       <div onClick={() => GoToHome("/")} className="flex items-center gap-2 cursor-pointer">
         <img src={Zarrin} alt="logo" className="w-8 h-8"/>
