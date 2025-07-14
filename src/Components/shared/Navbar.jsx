@@ -16,13 +16,13 @@ const Navbar = () => {
   return (
     <header className=" bg-white shadow-md py-4 px-6  w-full">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-      <div onClick={() => GoToHome("/")} className="flex items-center gap-2 cursor-pointer">
-        <img src={Zarrin} alt="logo" className="w-8 h-8"/>
-        <h3 className="text-2xl font-bold">Zarrin</h3>
-      </div>
+        <div onClick={() => GoToHome("/")} className="flex items-center gap-2 cursor-pointer">
+          <img src={Zarrin} alt="logo" className="w-8 h-8"/>
+          <h3 className="text-2xl font-bold">Zarrin</h3>
+        </div>
 
-      {/*Desktop Nav */}
-      <nav className="hidden md:flex items-center gap-6  ">
+        {/*Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-6  ">
         <ul className="flex gap-8 text-[16px] font-semibold cursor-pointer">
           {NavLinks.map((link) => (
             <li>
@@ -37,10 +37,10 @@ const Navbar = () => {
           className="bg-[#7c4ee4] text-black px-4 py-2 rounded"
           text="Contact Us"
         /></Link>
-      </nav>
+        </nav>
 
-      {/*Mobile Menu Toggle */}
-      <div className="md:hidden ">
+        {/*Mobile Menu Toggle */}
+        <div className="md:hidden ">
           {menuOpen ? (
             <HiX className="text-2xl cursor-pointer" onClick={() => setMenuOpen(false)} />
           ) : (
@@ -48,8 +48,8 @@ const Navbar = () => {
              className="text-3xl cursor-pointer"
              onClick={() => setMenuOpen(true)} />
           )}
+        </div>
       </div>
-    </div>
 
       {/* Mobile Menu */}
       {menuOpen && (

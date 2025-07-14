@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import Button from "../shared/Button";
 import VRAI from "../Assets/Images/VRAI.png";
 import { useNavigate } from "react-router-dom";
@@ -81,25 +81,9 @@ const popularPosts = [
 ];
 const Home = () => {
   const navigate = useNavigate();
-  // Newsletter local state
-  const [email, setEmail] = useState("");
-  const [toast, setToast] = useState({ show: false, type: "", message: "" });
+ 
 
-  const validateEmail = (e) => /.+@.+\..+/.test(e);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let type = "success",
-      message = "Subscribed successfully!";
-    if (!email) {
-      type = "error";
-      message = "Email is required";
-    } else if (!validateEmail(email)) {
-      type = "error";
-      message = "Invalid email";
-    } else setEmail("");
-    setToast({ show: true, type, message });
-    setTimeout(() => setToast({ ...toast, show: false }), 3000);
-  };
+ 
   return (
     <>
       {/*heroSection*/}
@@ -308,8 +292,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/*newsletter section */}
       
     </>
   );

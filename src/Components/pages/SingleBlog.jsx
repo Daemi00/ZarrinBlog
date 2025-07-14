@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-import Newsletter from "../shared/Newsletter";
+
 import Button from "../shared/Button";
+
 const popularPosts = [
   {
     image: require("../Assets/Images/singer.png"),
@@ -33,25 +34,7 @@ const popularPosts = [
 
 const SingleBlog = () => {
   const navigate = useNavigate();
-  // Newsletter local state
-  const [email, setEmail] = useState("");
-  const [toast, setToast] = useState({ show: false, type: "", message: "" });
-
-  const validateEmail = (e) => /.+@.+\..+/.test(e);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let type = "success",
-      message = "Subscribed successfully!";
-    if (!email) {
-      type = "error";
-      message = "Email is required";
-    } else if (!validateEmail(email)) {
-      type = "error";
-      message = "Invalid email";
-    } else setEmail("");
-    setToast({ show: true, type, message });
-    setTimeout(() => setToast({ ...toast, show: false }), 3000);
-  };
+ 
   return (
     <main className="flex-1 w-full bg-white ">
       <div className="max-w-4xl mx-auto w-full px-4 pt-8 pb-2 text-xs text-gray-500 font-medium">
